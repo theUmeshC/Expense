@@ -1,8 +1,9 @@
+import ExpenseTracker from "./Pages/ExpenseTracker";
 
 function App() {
   return (
     <div className="App">
-      Hello world!
+      <ExpenseTracker />
     </div>
   );
 }
