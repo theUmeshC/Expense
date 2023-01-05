@@ -1,33 +1,43 @@
-import React from 'react'
-import '../Ui/HistoryCard.css';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const HistoryCard = () => {
+import '../Ui/HistoryCard.css';
+import HistoryTransaction from './HistoryTransaction';
+
+function HistoryCard({ load }) {
+  const [history, setHistory] = useState([]);
+  useEffect(() => {
+    setHistory(JSON.parse(localStorage.getItem('transaction')));
+  }, [load]);
+
   return (
-    <div className='history_container
-    '>
-      <h4 className="history_title">
-        History
-      </h4>
+    <div
+      className="history_container
+    "
+    >
+      <h4 className="history_title">History</h4>
       <div className="history_transaction_container">
-        <div className="history_transaction positive_history">
-          <span className="history_transaction_title">Camera</span>
-          <span className="history_transaction_amount">100</span>
-        </div>
-        <div className="history_transaction negative_history">
-          <span className="history_transaction_title">Camera</span>
-          <span className="history_transaction_amount ">100</span>
-        </div>
-        <div className="history_transaction negative_history">
-          <span className="history_transaction_title">Camera</span>
-          <span className="history_transaction_amount ">100</span>
-        </div>
-        <div className="history_transaction negative_history">
-          <span className="history_transaction_title">Camera</span>
-          <span className="history_transaction_amount ">100</span>
-        </div>
+        {history
+          ? history.map((item) => (
+            <HistoryTransaction
+              key={Math.random()}
+              text={item.text}
+              amount={item.amount}
+              type={item.type}
+            />
+          ))
+          : null}
       </div>
     </div>
-  )
+  );
 }
 
-export default HistoryCard
+HistoryCard.propTypes = {
+  load: PropTypes.instanceOf(Array),
+};
+
+HistoryCard.defaultProps = {
+  load: PropTypes.instanceOf(Array),
+};
+
+export default HistoryCard;

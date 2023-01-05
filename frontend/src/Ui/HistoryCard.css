@@ -12,7 +12,7 @@
 
 .history_transaction_container {
   width: 90%;
-  max-height: 70px;
+  max-height: 60px;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -56,10 +56,10 @@
   scale: 1.05;
 }
 
-.negative_history {
+.expense_transaction {
   background-color: #fa0a0a;
 }
 
-.positive_history {
+.income_transaction {
   background-color: #00fb00;
 }
