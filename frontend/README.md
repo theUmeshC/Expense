@@ -44,7 +44,6 @@ Start the server
 - View Balance, Income, Expenses, History,
 - add transaction
 
-```
 ## 🔗 Link to Visit the App 
 
 [![Expense](https://img.shields.io/badge/Expense-000?style=for-the-badge&logo=ko-fi&logoColor=blue)](https://shopify-c2d36.web.app)
