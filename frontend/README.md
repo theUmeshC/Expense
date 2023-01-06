@@ -46,7 +46,7 @@ Start the server
 
 ## 🔗 Link to Visit the App 
 
-[![Expense](https://img.shields.io/badge/Expense-000?style=for-the-badge&logo=ko-fi&logoColor=blue)](https://shopify-c2d36.web.app)
+[![Expense](https://img.shields.io/badge/Expense-000?style=for-the-badge&logo=ko-fi&logoColor=blue)](https://p-expense-4d017.web.app/)
 
 ## Below you can find the project sample image
 
