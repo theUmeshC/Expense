@@ -9,3 +9,11 @@ body {
   background-color: #000;
   color: white;
 }
+
+.expense_transaction {
+  background-color: #fa0a0a;
+}
+
+.income_transaction {
+  background-color: #00fb00;
+} 

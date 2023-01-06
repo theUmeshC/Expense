@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
+import useStyles from '../Ui/TransactionCardMS';
 
 import setLocalStorage from '../Helper/setDataToLS';
 import setIncomeExpense from '../Helper/setIncomeExpenses';
-import '../Ui/TransactionCard.css';
 
 function TransactionCard({ handleLoad }) {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('');
   const [activeBtn, setActiveBtn] = useState(false);
   const reg = /^[-+]?\d+(\.\d+)?$/;
+
+  const classes = useStyles();
 
   useEffect(() => {
     if (text !== '' && amount !== '') {
@@ -50,14 +53,13 @@ function TransactionCard({ handleLoad }) {
   };
 
   return (
-    <div className="transaction_container">
-      <h4 className="transaction_title">Add new transaction</h4>
-      <form className="transaction_body" onSubmit={handleAddTransaction}>
+    <div className={classes.transaction_container}>
+      <h4 className={classes.transaction_title}>Add new transaction</h4>
+      <form className={classes.transaction_body} onSubmit={handleAddTransaction}>
         <h5>Text</h5>
         <input
           id="tran_input"
           placeholder="Enter Text"
-          className="transaction_input"
           type="text"
           value={text}
           required
@@ -68,10 +70,10 @@ function TransactionCard({ handleLoad }) {
         <h5>Amount</h5>
         <p>(negative - expenses, positive - income)</p>
         <input
-          type="text"
-          className="transaction_input"
+          type="number"
           placeholder="Enter amount"
           value={amount}
+          step="0.25"
           required
           onChange={(e) => {
             setAmount(e.target.value);
@@ -79,7 +81,7 @@ function TransactionCard({ handleLoad }) {
         />
         <button
           type="submit"
-          className={activeBtn ? 'add_transaction' : 'btn_not_active'}
+          className={activeBtn ? classes.add_transaction : classes.btn_not_active}
         >
           Add transaction
         </button>

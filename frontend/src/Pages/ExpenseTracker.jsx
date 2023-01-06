@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import BalanceCard from '../Components/BalanceCard';
 import HistoryCard from '../Components/HistoryCard';
 import TransactionCard from '../Components/TransactionCard';
-import '../Ui/ExpenseTracker.css';
+import useStyles from '../Ui/ExpenseTrackerMS';
 
 function ExpenseTracker({ load, handleLoad }) {
+  const classes = useStyles();
   return (
-    <div className="expense_tracker_container">
+    <div className={classes.expense_tracker_container}>
       <BalanceCard load={load} />
       <HistoryCard load={load} />
       <TransactionCard handleLoad={handleLoad} />

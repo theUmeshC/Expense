@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import '../Ui/BalanceCard.css';
+import useStyles from '../Ui/BalanceCardMS';
 
 function BalanceCard({ load }) {
   const [balance, setBalance] = useState(0);
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
+
+  const classes = useStyles();
 
   useEffect(() => {
     const lsBalance = JSON.parse(localStorage.getItem('balance'));
@@ -24,27 +27,27 @@ function BalanceCard({ load }) {
   }, [load]);
 
   return (
-    <div className="balance_card_container">
-      <h3 className="container_title">Expense Tracker</h3>
-      <div className="balance_card">
-        <div className="balance_card_current_status">
+    <div className={classes.balance_card_container}>
+      <h3 className={classes.container_title}>Expense Tracker</h3>
+      <div className={classes.balance_card}>
+        <div className={classes.balance_card_current_status}>
           <h5>YOUR BALANCE</h5>
-          <h3 className="positive_balance">
+          <h3 className={classes.positive_balance}>
             $
             {`${balance}`}
           </h3>
         </div>
-        <div className="balance_card_expenses_card">
-          <div className="income_expense income">
+        <div className={classes.balance_card_expenses_card}>
+          <div className={classNames(classes.income, classes.income_expense)}>
             <h6>INCOME</h6>
-            <h6 className="positive_balance">
+            <h6 className={classes.positive_balance}>
               $
               {`${income}`}
             </h6>
           </div>
-          <div className="income_expense">
+          <div className={classes.income_expense}>
             <h6>EXPENSE</h6>
-            <h6 className="negative_balance">
+            <h6 className={classes.negative_balance}>
               $
               {`${expense}`}
             </h6>
