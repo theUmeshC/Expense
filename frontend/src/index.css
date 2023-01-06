@@ -6,14 +6,15 @@ body {
   text-decoration: none;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
   color: white;
 }
 
 .expense_transaction {
+  color: #ccc;
   background-color: #fa0a0a;
 }
 
 .income_transaction {
-  background-color: #00fb00;
+  color: #ccc;
+  background-color: #CE7777;
 } 

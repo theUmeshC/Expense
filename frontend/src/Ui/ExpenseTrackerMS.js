@@ -1,18 +1,15 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() => ({
+
   expense_tracker_container: {
-    width: '320px',
-    backgroundColor: '#191919',
+    width: '550px',
+    backgroundColor: '#282A3A',
     display: 'flex',
     flexDirection: 'column',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
-    maxHeight: '90%',
+    margin: 'auto',
     borderRadius: '5px',
-    overflowY: 'auto',
-    overflowX: 'hidden',
+    padding: '7px',
   },
+
 }));

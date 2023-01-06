@@ -1,25 +1,25 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() => ({
+
   history_container: {
     width: '90%',
     display: 'flex',
     flexDirection: 'column',
-    margin: '0 20px',
+    margin: '12px auto',
   },
 
   history_title: {
-    margin: '15px 0',
-    borderBottom: '1px solid grey',
+    margin: '10px 0',
   },
 
   history_transaction_container: {
     width: '90%',
-    maxHeight: '60px',
+    height: '140px',
     display: 'flex',
     flexDirection: 'column',
     margin: 'auto',
-    gap: '5px',
+    gap: '8px',
     overflowY: 'auto',
     '&::-webkit-scrollbar': {
       width: '6px',
@@ -42,23 +42,11 @@ export default makeStyles(() => ({
     width: '90%',
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '5px 5px',
+    padding: '10px 5px',
     borderRadius: '5px',
     fontWeight: 600,
-    fontSize: '12px',
+    fontSize: '13px',
     margin: 'auto',
-    color: 'black',
-    transition: 'all 0.2s ease-in-out',
-    '&:hover': {
-      scale: 1.05,
-    },
   },
 
-  //   expense_transaction: {
-  //     backgroundColor: '#fa0a0a',
-  //   },
-
-//   income_transaction: {
-//     backgroundColor: '#00fb00',
-//   },
 }));

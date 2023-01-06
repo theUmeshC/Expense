@@ -32,7 +32,7 @@ function BalanceCard({ load }) {
       <div className={classes.balance_card}>
         <div className={classes.balance_card_current_status}>
           <h5>YOUR BALANCE</h5>
-          <h3 className={classes.positive_balance}>
+          <h3 className={classes.balance}>
             $
             {`${balance}`}
           </h3>

@@ -1,16 +1,16 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() => ({
+
   transaction_container: {
     width: '90%',
     display: 'flex',
     flexDirection: 'column',
-    margin: '0 20px',
+    margin: '12px auto',
   },
 
   transaction_title: {
     margin: '10px 0',
-    borderBottom: '1px solid grey',
   },
 
   transaction_body: {
@@ -19,20 +19,20 @@ export default makeStyles(() => ({
     flexDirection: 'column',
     margin: 'auto',
     '& h5, p': {
-      margin: '0px',
+      margin: '2px',
     },
     '& p': {
       fontSize: '12px',
     },
     '& input': {
-      margin: '5px 0',
-      padding: '2px 5px',
+      margin: '7px 0',
+      padding: '7px 5px',
     },
   },
 
   add_transaction: {
-    margin: '7px 0',
-    padding: '7px',
+    margin: '10px 0',
+    padding: '8px',
     color: 'white',
     borderRadius: '5px',
     cursor: 'pointer',
@@ -50,8 +50,8 @@ export default makeStyles(() => ({
   },
 
   btn_not_active: {
-    margin: '7px 0',
-    padding: '7px',
+    margin: '10px 0',
+    padding: '8px',
     color: 'white',
     cursor: 'not-allowed',
     borderRadius: '5px',
@@ -59,4 +59,5 @@ export default makeStyles(() => ({
     border: '1px solid #040404',
     transition: '0.01s all ease-in-out',
   },
+
 }));
