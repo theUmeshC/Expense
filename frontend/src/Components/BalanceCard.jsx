@@ -59,11 +59,7 @@ function BalanceCard({ load }) {
 }
 
 BalanceCard.propTypes = {
-  load: PropTypes.instanceOf(Array),
-};
-
-BalanceCard.defaultProps = {
-  load: PropTypes.instanceOf(Array),
+  load: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default BalanceCard;

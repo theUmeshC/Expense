@@ -20,7 +20,10 @@ export default makeStyles(() => ({
     flexDirection: 'column',
     margin: 'auto',
     gap: '8px',
+    border: '1px solid grey',
+    padding: '10px 0',
     overflowY: 'auto',
+    borderRadius: '7px',
     '&::-webkit-scrollbar': {
       width: '6px',
     },

@@ -16,15 +16,9 @@ function HistoryTransaction({ text, amount, type }) {
 }
 
 HistoryTransaction.propTypes = {
-  text: PropTypes.string,
-  amount: PropTypes.string,
-  type: PropTypes.string,
-};
-
-HistoryTransaction.defaultProps = {
-  text: PropTypes.string,
-  amount: PropTypes.string,
-  type: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default HistoryTransaction;

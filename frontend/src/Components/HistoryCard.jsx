@@ -34,11 +34,7 @@ function HistoryCard({ load }) {
 }
 
 HistoryCard.propTypes = {
-  load: PropTypes.instanceOf(Array),
-};
-
-HistoryCard.defaultProps = {
-  load: PropTypes.instanceOf(Array),
+  load: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default HistoryCard;
